@@ -8,7 +8,7 @@
     - "openssl genrsa -out {{ ca_key }} 2048"
   when: _ca_key_exists is undefined or ca_force_create == true
 
-- name: "greate root CA cert"
+- name: "create root CA cert"
   shell:
     "{{ item }}"
   args:
