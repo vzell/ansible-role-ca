@@ -18,13 +18,13 @@ ca_certs_dir: /usr/share/ca-certs
 # where to copy the produces files to
 ca_distribution_certs_dir: "{{ playbook_dir }}/../keys_n_certs"
 
-ca_rootca_password: Chang3m3
+ca_rootca_password: welcome1
 ca_cert: ca.pem
 ca_key: ca-priv-key.pem
 
-ca_country: IL
-ca_state: Israel
-ca_locality: Israel
+ca_country: DE
+ca_state: Nordrhein-Westfalen
+ca_locality: Wiehl
 ca_organization: "{{ shelleg.domain_prefix | default('domain.local') }}"
 ca_domain: "{{ shelleg.domain_name | default('domain.local') }}"
 ca_organizationalunit: IT
