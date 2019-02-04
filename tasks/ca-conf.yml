@@ -11,7 +11,7 @@
   with_items:
   - "{{ ca_certs_dir }}"
 
-- name: "Deploy configuration items"
+- name: "deploy configuration items"
   template:
     src: "{{ item }}.j2"
     dest: "{{ ca_certs_dir }}/{{ item }}"
@@ -20,5 +20,3 @@
   with_items:
     - serial
     - ca.conf
-
-
