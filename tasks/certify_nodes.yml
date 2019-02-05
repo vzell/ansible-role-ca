@@ -21,7 +21,7 @@
   with_inventory_hostnames: all:!localhost
 
 - name: "Generate the CA trusted certificate"
-  shell: 'sudo openssl x509 -req -days 1825 -in "{{ item }}".csr -CA ca.pem -CAkey ca-priv-key.pem -CAcreateserial -out "{{ item }}"-cert.pem -extensions v3_req -extfile /usr/lib/ssl/openssl.cnf'
+  shell: 'sudo openssl x509 -req -days 1825 -in "{{ item }}".csr -CA ca.pem -CAkey ca-priv-key.pem -CAcreateserial -out "{{ item }}"-cert.pem -extensions v3_req -extfile "{{ openssl_dir }}"/openssl.cnf'
   args:
     chdir: "{{ ca_certs_dir }}"
   with_inventory_hostnames: all:!localhost

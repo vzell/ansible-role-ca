@@ -25,8 +25,10 @@ ca_key: ca-priv-key.pem
 ca_country: DE
 ca_state: Nordrhein-Westfalen
 ca_locality: Wiehl
-ca_organization: "{{ shelleg.domain_prefix | default('domain.local') }}"
-ca_domain: "{{ shelleg.domain_name | default('domain.local') }}"
+ca_organization: "{{ domain_prefix | default('domain.local') }}"
+ca_domain: "{{ domain_name | default('domain.local') }}"
 ca_organizationalunit: IT
-ca_commonname: "{{ shelleg.domain_prefix | default('domain.local') }}"
-ca_email: "ca-admin@{{ shelleg.domain_name | default('domain.local') }}"
+ca_commonname: "{{ domain_prefix | default('domain.local') }}"
+ca_email: "ca-admin@{{ domain_name | default('domain.local') }}"
+
+openssl_dir: /etc/pki/tls

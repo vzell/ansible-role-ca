@@ -1,7 +1,7 @@
 [ ca ]
-default_ca = {{ shelleg.domain_prefix }}_ca
+default_ca = {{ domain_prefix }}_ca
 
-[ {{ shelleg.domain_prefix }}_ca ]
+[ {{ domain_prefix }}_ca ]
 unique_subject = no
 new_certs_dir = .
 certificate = {{ ca_cert }}
