@@ -1,6 +1,6 @@
 ---
 - name: "ensure openssl is installed"
-  apt: name=openssl state=latest
+  package: name=openssl state=latest
 
 - name: "create configuration directory"
   file:
